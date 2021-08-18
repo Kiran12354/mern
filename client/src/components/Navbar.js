@@ -3,47 +3,46 @@ import { NavLink } from "react-router-dom";
 import logo from "../images/download.png";
 import { UserContext } from "../App";
 
-export const Navbar = ()=>{
 
-
-    const RenderMenu=()=>{
-      const{state,dispatch}=useContext(UserContext);
-      if(state==true){
-        return(
-          <>
-      <li className="nav-item">
-        <NavLink className="nav-link" to="/">Home</NavLink>
-      </li>
-      <li className="nav-item">
-        <NavLink className="nav-link" to="/about">About</NavLink>
-      </li>
-      <li className="nav-item">
-        <NavLink className="nav-link" to="/contact">Contact</NavLink>
-      </li>
-      <li className="nav-item">
-        <NavLink className="nav-link" to="/logout">Logout</NavLink>
-      </li>
-          </>
-        );
-      }else if(state==false){
-        return(
-          <>
-      <li className="nav-item">
-        <NavLink className="nav-link" to="/">Home</NavLink>
-      </li>
-      <li className="nav-item">
-        <NavLink className="nav-link" to="/login">Login</NavLink>
-      </li>
-      <li className="nav-item">
-        <NavLink className="nav-link" to="/signup">Registration</NavLink>
-      </li>
-      </>
-        );
-      }
-
-    }
-
+export const RenderMenu=()=>{
+  const{state,dispatch}=useContext(UserContext);
+  if(state==true){
     return(
+      <>
+  <li className="nav-item">
+    <NavLink className="nav-link" to="/">Home</NavLink>
+  </li>
+  <li className="nav-item">
+    <NavLink className="nav-link" to="/about">About</NavLink>
+  </li>
+  <li className="nav-item">
+    <NavLink className="nav-link" to="/contact">Contact</NavLink>
+  </li>
+  <li className="nav-item">
+    <NavLink className="nav-link" to="/logout">Logout</NavLink>
+  </li>
+      </>
+    );
+  }else if(state==false){
+    return(
+      <>
+  <li className="nav-item">
+    <NavLink className="nav-link" to="/">Home</NavLink>
+  </li>
+  <li className="nav-item">
+    <NavLink className="nav-link" to="/login">Login</NavLink>
+  </li>
+  <li className="nav-item">
+    <NavLink className="nav-link" to="/signup">Registration</NavLink>
+  </li>
+  </>
+    );
+  }
+
+}
+
+export const Navbar = ()=>{
+return(
      <>
   <nav className="navbar navbar-expand-lg navbar-light bg-white">
   <NavLink className="navbar-brand" to="/">
