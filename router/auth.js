@@ -6,11 +6,6 @@ const Register = require("../model/userSchema");
 const bcrypt = require("bcryptjs");
 const authenticate = require("../middleware/authenticate");
 
-router.get("/", (req,res)=>{
-    console.log("hello server page");
-    res.send("Hello world from server page");
-});
-
 
 
 router.post("/register", async(req,res)=>{
