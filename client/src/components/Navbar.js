@@ -7,7 +7,7 @@ export const Navbar = ()=>{
 const{state,dispatch}=useContext(UserContext);
 
     const RenderMenu=()=>{
-      if(state){
+      if(state==true){
         return(
           <>
       <li className="nav-item">
