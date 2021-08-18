@@ -6,7 +6,7 @@ import { UserContext } from "../App";
 
 export const RenderMenu=()=>{
   const{state,dispatch}=useContext(UserContext);
-  if(state=true){
+  if(state==true){
     return(
       <>
   <li className="nav-item">
