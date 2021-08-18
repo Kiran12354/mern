@@ -6,7 +6,7 @@ import { UserContext } from "../App";
 
 export const RenderMenu=()=>{
   const{state,dispatch}=useContext(UserContext);
-  if(state==true){
+  if(state){
     return(
       <>
   <li className="nav-item">
@@ -23,7 +23,7 @@ export const RenderMenu=()=>{
   </li>
       </>
     );
-  }else if(state==false){
+  }else{
     return(
       <>
   <li className="nav-item">
