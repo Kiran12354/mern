@@ -1,8 +1,8 @@
 export const initialState=false;
 
-export const reducer=(state,action)=>{
+export const reducer=(initialState,state,action)=>{
     if(action.type==="USER"){
-        return state=action.payload;
+        return action.payload;
     }
-    // return state;
+    return state;
 }
