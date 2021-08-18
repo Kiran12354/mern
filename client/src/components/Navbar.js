@@ -4,10 +4,11 @@ import logo from "../images/download.png";
 import { UserContext } from "../App";
 
 export const Navbar = ()=>{
-const{state,dispatch}=useContext(UserContext);
+
 
     const RenderMenu=()=>{
-      if(state==true){
+      const{state,dispatch}=useContext(UserContext);
+      if(state){
         return(
           <>
       <li className="nav-item">
@@ -23,7 +24,7 @@ const{state,dispatch}=useContext(UserContext);
         <NavLink className="nav-link" to="/logout">Logout</NavLink>
       </li>
           </>
-        )
+        );
       }else{
         return(
           <>
@@ -37,7 +38,7 @@ const{state,dispatch}=useContext(UserContext);
         <NavLink className="nav-link" to="/signup">Registration</NavLink>
       </li>
       </>
-        )
+        );
       }
 
     }
