@@ -27,8 +27,9 @@ const loginUser= async(e)=>{
   if(res.status===400 || !data){
      window.alert("Invalid Credentials");
   }else{
-    dispatch({type:"USER",payload:true});
     window.alert("login successful");
+    dispatch({type:"USER",payload:true});
+    
     history.push("/",{replace:true});
   }
 }
