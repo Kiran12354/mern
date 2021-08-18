@@ -25,7 +25,7 @@ export const Navbar = ()=>{
       </li>
           </>
         );
-      }else{
+      }else if(state==false){
         return(
           <>
       <li className="nav-item">
