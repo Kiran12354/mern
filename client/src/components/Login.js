@@ -28,8 +28,8 @@ const loginUser= async(e)=>{
      window.alert("Invalid Credentials");
   }else{
     dispatch({type:"USER",payload:true});
-    alert("login successful");
-    history.push("/");
+    window.alert("login successful");
+    history.push("/",{replace:true});
   }
 }
 
