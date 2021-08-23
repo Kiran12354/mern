@@ -41,7 +41,7 @@ const Routing=()=>{
 }
 
 const App=()=> {
-const {state,dispatch}=useReducer(reducer,initialState)
+const {state,dispatch}=useReducer(reducer,initialState);
   return (
     <>
       <UserContext.Provider value={{state,dispatch}}>
